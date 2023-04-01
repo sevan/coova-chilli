@@ -2,7 +2,7 @@ name: Github Actions Build
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "actions-demo" ]
   pull_request:
     branches: [ "master" ]
 
