@@ -17,7 +17,7 @@ jobs:
         sudo apt install gengetopt libjson-c-dev
     - name: Bootstrap
       run: ./bootstrap
-    - name: configure
+    - name: Configure
       run: |
         ./configure --enable-largelimits --enable-proxyvsa --enable-miniportal \
         --enable-chilliredir --enable-chilliproxy --enable-binstatusfile \
@@ -25,5 +25,7 @@ jobs:
         --enable-eapol --enable-uamdomainfile --enable-redirdnsreq --enable-modules \
         --enable-multiroute --enable-extadmvsa --with-openssl --with-poll \
         --enable-json --enable-libjson
-    - name: make
+    - name: Build
       run: make
+    - name: Install
+      run: make install
