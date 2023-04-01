@@ -18,11 +18,12 @@ jobs:
     - name: Bootstrap
       run: ./bootstrap
     - name: configure
-      run: ./configure --enable-largelimits --enable-proxyvsa --enable-miniportal
-      --enable-chilliredir --enable-chilliproxy --enable-binstatusfile
-      --enable-chilliscript --enable-chilliradsec --with-avl --enable-layer3
-      --enable-eapol --enable-uamdomainfile --enable-redirdnsreq --enable-modules
-      --enable-multiroute --enable-extadmvsa --with-openssl --with-poll
-      --enable-json --enable-libjson
+      run: |
+        ./configure --enable-largelimits --enable-proxyvsa --enable-miniportal
+        --enable-chilliredir --enable-chilliproxy --enable-binstatusfile
+        --enable-chilliscript --enable-chilliradsec --with-avl --enable-layer3
+        --enable-eapol --enable-uamdomainfile --enable-redirdnsreq --enable-modules
+        --enable-multiroute --enable-extadmvsa --with-openssl --with-poll
+        --enable-json --enable-libjson
     - name: make
       run: make
